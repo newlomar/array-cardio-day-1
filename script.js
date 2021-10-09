@@ -44,12 +44,26 @@
       return [inventor.first, inventor.last]
     })
 
-    console.log('Answer to 2 - ', ArrayOfInventorsFirstAndLastNames)
+    console.log('Answer to exercise 2 - ', ArrayOfInventorsFirstAndLastNames)
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
 
-    
+    const reversedSortArray = inventors.sort((a, b) => {
+
+      if (a.year > b.year) {
+        return 1;
+      }
+
+      if(a.year < b.year) {
+        return -1
+      }
+
+      return 0
+
+    })
+
+    console.log('Answer to exercise 3 - ', reversedSortArray)
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
