@@ -94,6 +94,7 @@
       return 0
     })
 
+    console.log('Answer Exercise 5 - ')
     console.table(inventorsSortedByYearsLived)
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -128,4 +129,14 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-    
+    const sumInstances = data.reduce((obj, item) => {
+
+      if(!obj[item]) {
+        obj[item] = 0
+      }
+
+      obj[item]++
+      return obj
+    }, {})
+
+    console.table(sumInstances)
